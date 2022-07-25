@@ -1,5 +1,8 @@
-
+var movieApi = `8b11ffde`;
+apiUrlMovie = `http://www.omdbapi.com/?s=jaws&apikey=8b11ffde`;
 //var musicApi = '815c4d4e03msh9872b4274f9aa53p1b93a1jsn7528b7bc9183'
+var movieFormEl = document.querySelector("#search")
+var movie;
 //Check calls movie API
 //Check calls from music API
 
@@ -13,17 +16,21 @@
 //create a function to create HTML on page
 
 //fetch url from movie api
-const optionsMovie = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '815c4d4e03msh9872b4274f9aa53p1b93a1jsn7528b7bc9183',
-		'X-RapidAPI-Host': 'mdblist.p.rapidapi.com'
-	}
-};
+fetch(apiUrlMovie)
+.then(response=>response.json())
+.then(response=>console.log(response))
+.catch(err=>console.error(err));
 
-fetch('https://mdblist.p.rapidapi.com/?s=jaws', optionsMovie)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
 
-	//create function response to capture user input, include local storage
+//create function response to capture user input, include local storage
+function movieInput(movieName) {
+	console.log(movieName);
+	movieInput();
+}
+
+ function formSubmitHandler(event) {
+	//Prevent default
+    event.preventDefault();
+    console.log(event);
+ }
+movieFormEl.addEventListener("submit", formSubmitHandler);
