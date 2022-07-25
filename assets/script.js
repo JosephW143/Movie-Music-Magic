@@ -23,12 +23,10 @@ fetch(apiUrlMovie)
 
 
 //create function response to capture user input, include local storage
-function movieInput(event) {
-	var movieNameInput = document.querySelector("input[name='search']");
-	console.dir(movieNameInput)
-	movieInput();
-	
-	movieFormEl.appendChild(movieFormEl);
+
+document.getElementById("movie-name").onclick = function(){
+var movieName = document.getElementById("search").value;
+console.log(movieName);
 }
 
  function formSubmitHandler(event) {
@@ -37,3 +35,4 @@ function movieInput(event) {
     console.log(event);
  }
 movieFormEl.addEventListener("submit", formSubmitHandler);
+
