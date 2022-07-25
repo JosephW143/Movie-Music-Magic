@@ -1,7 +1,9 @@
+
+//var musicApi = '815c4d4e03msh9872b4274f9aa53p1b93a1jsn7528b7bc9183'
 //Check calls movie API
 //Check calls from music API
-//fetch url from movie api
-//create function response to capture user input, include local storage
+
+
 //parse data?
 //send data to HTML
 //fetch music api
@@ -10,23 +12,18 @@
 //send data to HTML
 //create a function to create HTML on page
 
-
-
-
-
-
-//var musicApi = '815c4d4e03msh9872b4274f9aa53p1b93a1jsn7528b7bc9183';
-var musicApi = '815c4d4e03msh9872b4274f9aa53p1b93a1jsn7528b7bc9183'
-
-const options = {
+//fetch url from movie api
+const optionsMovie = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': '815c4d4e03msh9872b4274f9aa53p1b93a1jsn7528b7bc9183',
-		'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+		'X-RapidAPI-Host': 'mdblist.p.rapidapi.com'
 	}
 };
 
-fetch('https://spotify23.p.rapidapi.com/search/?q=%3CREQUIRED%3E&type=multi&offset=0&limit=10&numberOfTopResults=5', options)
+fetch('https://mdblist.p.rapidapi.com/?s=jaws', optionsMovie)
 	.then(response => response.json())
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
+
+	//create function response to capture user input, include local storage
