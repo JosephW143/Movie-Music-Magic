@@ -1,5 +1,5 @@
 var movieApi = `8b11ffde`;
-apiUrlMovie = `http://www.omdbapi.com/?s=jaws&apikey=8b11ffde`;
+apiUrlMovie = `http://www.omdbapi.com/?s=${movie}&apikey=8b11ffde`;
 //var musicApi = '815c4d4e03msh9872b4274f9aa53p1b93a1jsn7528b7bc9183'
 var movieFormEl = document.querySelector("#search")
 var movie;
@@ -23,9 +23,12 @@ fetch(apiUrlMovie)
 
 
 //create function response to capture user input, include local storage
-function movieInput(movieName) {
-	console.log(movieName);
+function movieInput(event) {
+	var movieNameInput = document.querySelector("input[name='search']");
+	console.dir(movieNameInput)
 	movieInput();
+	
+	movieFormEl.appendChild(movieFormEl);
 }
 
  function formSubmitHandler(event) {
