@@ -1,14 +1,14 @@
 var movieApi = `8b11ffde`;
-apiUrlMovie = "http://www.omdbapi.com/?apikey=8b11ffde&t=" + title + "&y=" + year + "&plot=short&r=json";
-var movieFormEl = document.querySelector("#search")
+//var apiUrlMovie = "http://www.omdbapi.com/?apikey=8b11ffde&s=" + title + "&y=" + year + "&plot=short&r=json";
+var apiUrlMovie =  `https://omdbapi.com/?s=avengers&page=1&apiKey=8b11ffde`;
+var movieFormEl = document.getElementById('search')
 var title = document.querySelector("#search")
 var year = document.querySelector("#search")
+//let movies = [];
+//var nameInputEl = document.querySelector("#search")
+//var movieSearch = document.querySelector("#search")
 
-let movies = [];
-//apiUrlMovie = (`http://www.omdbapi.com/?s=${movie}&apikey=${movieApi}`)
-//apiUrlMovie = `http://www.omdbapi.com/?s=${`<>`}&apikey=8b11ffde`;
 //var musicApi = '815c4d4e03msh9872b4274f9aa53p1b93a1jsn7528b7bc9183'
-
 
 //Check calls movie API
 //Check calls from music API
@@ -21,15 +21,29 @@ let movies = [];
 //create a function to create HTML on page
 
 //fetch url from movie api
-//var searchMovie = function(title) {
-  //  apiUrlMovie = "http://www.omdbapi.com/?apikey=8b11ffde&t=" + title + "&y=" + year + "&plot=short&r=json";
+//var getMovie = function() {
+  fetch(apiUrlMovie)
+  .then(response=>response.json())
+  .then(data=>console.log(data))
+  .catch(err=>console.error(err));
+  
+ //if (data.Response = "True") displayMovieList(data.search);
 
-fetch(apiUrlMovie)
-.then(response=>response.json())
-.then(response=>console.log(response))
-.catch(err=>console.error(err));
-//searchMovie()
 //}
+
+function findMovies() {
+  let movies = (search.value).trim();
+  if(movies.length >0) {
+    searchList.search.remove('hide-search-list');
+  loadMovies(movies);
+  }
+}
+
+function displayMovieList(movies) {
+for (let i = 0; i < movies.length; i++) {
+
+}
+}
 
 //create function response to capture user input, include local storage
 
@@ -41,14 +55,21 @@ console.log(movieName);
  function formSubmitHandler(event) {
 	//Prevent default
     event.preventDefault();
+
+    var movieSearch = nameInputEl.value.trim();
+
+    if (movieSearch) {
+      searchMovie(movieSearch)
+    }
+
     let movie = {
         title: document.getElementById("search").value,
       //  year: document.getElementById
     }
-        movies.push(movie);
+        movie.push(movie);
         //document.querySelector("input").reset();
 
-        localStorage.setItem('myMovies', JSON.stringify(movie));
+        localStorage.setItem('movies', JSON.stringify(movie));
         console.log(localStorage);
     
  }
