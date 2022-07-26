@@ -21,16 +21,14 @@ var year = document.querySelector("#search")
 //create a function to create HTML on page
 
 //fetch url from movie api
-//var getMovie = function() {
-  fetch(apiUrlMovie)
+var getMovie = function() {
+  fetch( `https://omdbapi.com/?s=thor&page=1&apiKey=8b11ffde`)
   .then(response=>response.json())
   .then(data=>console.log(data))
   .catch(err=>console.error(err));
-  
  //if (data.Response = "True") displayMovieList(data.search);
-
-//}
-
+}
+getMovie();
 function findMovies() {
   let movies = (search.value).trim();
   if(movies.length >0) {
