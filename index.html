@@ -4,34 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Movie Music Magic</title>
 </head>
 <body>
-
-    <nav>
-        <div class="nav-wrapper blue">
-          <a href="#" class="brand-logo">Movie Music Magic</a>
-          <form>
-            <div class="input-field right">
-              <input id="search" type="text" required>
-              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-              <button class="btn" id="movie-name" type="submit" >Search</button>
-              <i class="material-icons">close</i>
-            </div>
-          </form>
-        </div>
-      </nav>
-      <div class="container">
-        <div class="row">
-          <div class="col s6">
-            <h2>Music</h2>
+  <!--header-->
+  <div class="navbar-fixed">
+    <nav class="blue">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Movie Music Magic</a>
+        <form>
+          <div class="input-field right">
+            <input id="search" type="search" placeholder="search" required>
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
           </div>
-          <div class="col s6">
-            <h2>Movies</h2>
+        </form>
+      </div>
+    </nav>
+  </div>
+  <main>
+    <!--card for displaying music content-->
+    <div class="row">
+      <div class="col s12 m12 l6">
+        <h2 class="center">Music</h2>
+        <div class="card">
+          <div class="card-image">
+            <span>Album Titile</span>
+          </div>
+          <div class="card-content">
+            <p>this is test text for music content</p>
           </div>
         </div>
       </div>
+      <!--card for displaying movie content-->
+      <div class="col s12 m12 l6">
+        <h2 class="center">Movie</h2>
+        <div class="card">
+          <div class="card-image">
+            <span>Movie Title</span>
+          </div>
+          <div class="card-content">
+            <p>this is test text for moive content</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--page footer-->
+  <footer class="page-footer blue">
+    <div class="footer-copyright">
+      <div class="container">
+      © 2022 Copyright
+      </div>
+    </div>
+  </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./assets/script.js"></script>
