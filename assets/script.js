@@ -1,14 +1,21 @@
 var movieApi = `8b11ffde`;
 //var apiUrlMovie = "http://www.omdbapi.com/?apikey=8b11ffde&s=" + title + "&y=" + year + "&plot=short&r=json";
-var apiUrlMovie =  `https://omdbapi.com/?s=avengers&page=1&apiKey=8b11ffde`;
+//var apiUrlMovie =  `https://omdbapi.com/?s=avengers&page=1&apiKey=8b11ffde`;
 var movieFormEl = document.getElementById('search')
 var title = document.querySelector("#search")
 var year = document.querySelector("#search")
 //let movies = [];
 //var nameInputEl = document.querySelector("#search")
 //var movieSearch = document.querySelector("#search")
+var musicApi = '815c4d4e03msh9872b4274f9aa53p1b93a1jsn7528b7bc9183'
 
-//var musicApi = '815c4d4e03msh9872b4274f9aa53p1b93a1jsn7528b7bc9183'
+
+var getMusic = function(movie) {
+  fetch(`https://spotify23.p.rapidapi.com/albums/?ids=3IBcauSj5M2A6lTeffJzdv`)
+  .then(response=>response.json())
+  .then(data=>console.log(data))
+  .catch(err=>console.error(err));
+}
 
 //Check calls movie API
 //Check calls from music API
@@ -21,14 +28,15 @@ var year = document.querySelector("#search")
 //create a function to create HTML on page
 
 //fetch url from movie api
-var getMovie = function() {
-  fetch( `https://omdbapi.com/?s=thor&page=1&apiKey=8b11ffde`)
+var getMovie = function(movie) {
+  fetch( `https://omdbapi.com/?s=${movie}&page=1&apiKey=8b11ffde`)
   .then(response=>response.json())
   .then(data=>console.log(data))
   .catch(err=>console.error(err));
  //if (data.Response = "True") displayMovieList(data.search);
 }
-getMovie();
+
+
 function findMovies() {
   let movies = (search.value).trim();
   if(movies.length >0) {
@@ -47,7 +55,8 @@ for (let i = 0; i < movies.length; i++) {
 
 document.getElementById("movie-name").onclick = function(){
 var movieName = document.getElementById("search").value;
-console.log(movieName);
+getMovie(movieName);
+//updateStorage(movieName);
 }
 
  function formSubmitHandler(event) {
@@ -62,14 +71,15 @@ console.log(movieName);
 
     let movie = {
         title: document.getElementById("search").value,
-      //  year: document.getElementById
+      
     }
         movie.push(movie);
-        //document.querySelector("input").reset();
-
-        localStorage.setItem('movies', JSON.stringify(movie));
-        console.log(localStorage);
-    
- }
-movieFormEl.addEventListener("submit", formSubmitHandler);
+       //  document.querySelector("input").reset();
+  }
+       // function updateStorage() {
+       // localStorage.setItem('movieName', JSON.stringify(movie));
+       // console.log(localStorage);
+       // }
+ 
+//movieFormEl.addEventListener("submit", formSubmitHandler);
 
