@@ -1,8 +1,11 @@
 var movieApi = `8b11ffde`;
-apiUrlMovie = `http://www.omdbapi.com/?s=${movie}&apikey=8b11ffde`;
+
+var year = document.querySelector("#search")
+//apiUrlMovie = (`http://www.omdbapi.com/?s=${movie}&apikey=${movieApi}`)
+//apiUrlMovie = `http://www.omdbapi.com/?s=${`<>`}&apikey=8b11ffde`;
 //var musicApi = '815c4d4e03msh9872b4274f9aa53p1b93a1jsn7528b7bc9183'
 var movieFormEl = document.querySelector("#search")
-var movie;
+var title = document.querySelector("#search")
 //Check calls movie API
 //Check calls from music API
 
@@ -16,23 +19,28 @@ var movie;
 //create a function to create HTML on page
 
 //fetch url from movie api
-fetch(apiUrlMovie)
+var searchMovie = function(title) {
+    apiUrlMovie = "http://www.omdbapi.com/?apikey=8b11ffde&t=" + title + "&y=" + year + "&plot=short&r=json";
+
+    fetch(apiUrlMovie)
 .then(response=>response.json())
 .then(response=>console.log(response))
 .catch(err=>console.error(err));
-
+searchMovie()
+}
 
 //create function response to capture user input, include local storage
 
 document.getElementById("movie-name").onclick = function(){
 var movieName = document.getElementById("search").value;
-console.log(movieName);
+//setItem(movieName);
 }
 
  function formSubmitHandler(event) {
 	//Prevent default
     event.preventDefault();
     console.log(event);
+    
  }
 movieFormEl.addEventListener("submit", formSubmitHandler);
 
