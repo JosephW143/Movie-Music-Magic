@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="/Movie-Music-Magic/assets/style.css"> 
+    
+     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 
     <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
    
@@ -13,6 +17,7 @@
 
 
 
+    
     <title>Movie Music Magic</title>
 </head>
 <body>
@@ -20,14 +25,15 @@
   <header>
    <div class="nav container">
      <a href="index.html" class="logo">
-      Movie <span> Vel </span>
+      Movie Mag<span>ic Music  </span>
      </a>
      <div class="search-box"> 
       <input type="search" name='' id="search-input" placeholder="Search Movie">
       <i class='bx bx-search-alt'></i>
      </div>
+     <!-- user-->
      <a href="#" class="user">
-      <img src="/Movie-Music-Magic/assets/imgs/nope.jpg" alt="" class="user-img"></ig>
+      <img src="/Movie-Music-Magic/assets/imgs/mmm.webp" alt="" class="user-img">
      </a>
 <!-- navbar-->
      <div class="navbar">
@@ -47,13 +53,13 @@
         <i class='bx bx-trending-up' ></i>
         <span class="nav-link-title">Trending</span>
       </a>
-
     </div>
   </header>
+  <!-- Home -->
 <section class="home container" id="home">
 
-
   <img src="/Movie-Music-Magic/assets/imgs/Jurassic-World-Dinosaur.avif" alt="" class="home-img">
+
   <div class="home-text">
     <h1 class="home-title">Jurassic World<br>Dominion</h1>
     <p>Released date</p>
@@ -67,51 +73,145 @@
 <!-- Home end-->
 <!-- Popular Section Start-->
 <section class="popular container" id="popular">
-
+<!-- heading -->
   <div class="heading"> 
     <h2 class="heading-tittle">Trending Movies</h2>
+<!-- Swiper Buttons-->
+<div class="swiper-btn">
+   <div class="swiper-button-prev"></div>
+   <div class="swiper-button-next"></div>
+
   </div>
-<div class="popular-content"></div>
+</div>
+
+
+<!-- content -->
+<div class="popular-content swiper">
   <div class="swiper-wrapper">
-  <div class="swiper-slide"></div>
-  <div class="movie-box"></div>
-  <img src="/Movie-Music-Magic/assets/imgs/la abuela.webp" alt="" class="movie-box">
-  <div class="box-text"></div>
+    <!-- Movie box 1-->
+    <div class="swiper-slide">
+     <div class="movie-box">
+       <img src="/Movie-Music-Magic/assets/imgs/la abuela.webp" alt="" class="movie-box-img">
+       <div class="box-text">
     <h2 class="movie-title">La Abuela</h2>
     <span class="movie-type">Action</span>
     <a href="#" class="watch-btn play-btn">
       <i class="bx bx-right-arrow"></i>
+  </a>
+
+    <!-- Movie 2-->
+    <div class="swiper-slide">
+    <div class="movie-box">
+    <img src="/Movie-Music-Magic/assets/imgs/LightYear.webp" alt="" class="movie-box">
+    <div class="box-text">
+      <h2 class="movie-title">LightYear</h2>
+      <span class="movie-type">PG</span>
+      <a href="#" class="watch-btn play-btn">
+        <i class="bx bx-right-arrow"></i>
+    </a>
+  </div>
+  </div>
+  </div>
 
 
+    <!-- Movie 2-->
+
+    <!-- Movie 2-->
+    <div class="swiper-slide">
+      <div class="movie-box">
+      <img src="/Movie-Music-Magic/assets/imgs/Jurassic-World-Dinosaur.avif" alt="" class="movie-box-img">
+      <div class="box-text">
+        <h2 class="movie-title">Jurassic World</h2>
+        <span class="movie-type">Action</span>
+        <a href="#" class="watch-btn play-btn">
+          <i class="bx bx-right-arrow"></i>
+      </a>
+    </div>
+    </div>
+    </div>
+
+<!-- Movie 3-->
+<div class="swiper-slide">
+  <div class="movie-box">
+  <img src="/Movie-Music-Magic/assets/imgs/gabby.webp" alt="" class="movie-box-img">
+  <div class="box-text">
+    <h2 class="movie-title">Gabby</h2>
+    <span class="movie-type">PG</span>
+    <a href="#" class="watch-btn play-btn">
+      <i class="bx bx-right-arrow"></i>
   </a>
 </div>
 </div>
 </div>
+
+<!-- Movie 4-->
+<div class="swiper-slide">
+  <div class="movie-box">
+  <img src="/Movie-Music-Magic/assets/imgs/fire of love.jpg" alt="" class="movie-box-img">
+  <div class="box-text">
+    <h2 class="movie-title">Fire of Love</h2>
+    <span class="movie-type">Action</span>
+    <a href="#" class="watch-btn play-btn">
+      <i class="bx bx-right-arrow"></i>
+  </a>
+</div>
+</div>
+</div>
+
+<!-- Movie 6-->
+<div class="swiper-slide">
+  <div class="movie-box">
+  <img src="/Movie-Music-Magic/assets/imgs/Elvis.jpg" alt="" class="movie-box-img">
+  <div class="box-text">
+    <h2 class="movie-title">Elvis Presley</h2>
+    <span class="movie-type">Action</span>
+    <a href="#" class="watch-btn play-btn">
+      <i class="bx bx-right-arrow"></i>
+  </a>
+</div>
+</div>
+</div>
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+
+</div>
+</section>
+<!-- trending ends-->
+<!-- Movies start-->
+<section class="movies container" id="movies">
+  <!-- heading-->
+  <div class="heading">
+    <h2 class="heading-tittle"> Movies</h2>
+ 
+  </div>
+<!-- movie content-->
+<div class="movies-content">
+<!-- box 1-->
+<div class="movie-box">
+  <img src="/Movie-Music-Magic/assets/imgs/Minions.jpg" alt="" class="movie-box-img">
+  <div class="box-text">
+    <h2 class="movie-title">La Abuela</h2>
+    <span class="movie-type">Action</span>
+    <a href="#" class="watch-btn play-btn">
+      <i class="bx bx-right-arrow"></i>
+  </a>
+</div>
 </div>
 
 
-<div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
-<div class="swiper-pagination"></div>
 
 
 
 
+</div>
 </section>
 
+<!-- swiper link js-->
+<script src="js/swiper-bundle.min.js"></script>
 
-
-
-
-
-
-
-<script src="/Movie-Music-Magic/assets/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </body>
 </html>
-
-
-
 
 
 
