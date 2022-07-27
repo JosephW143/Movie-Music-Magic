@@ -18,9 +18,12 @@ const options = {
 };
 
 var getMusic = function(movie) {
-  fetch(`https://spotify23.p.rapidapi.com/search/?q=${movie}%20soundtrack&type=albums&offset=0&limit=10&numberOfTopResults=1`, options)
+  fetch(`https://spotify23.p.rapidapi.com/search/?q=${movie}%20soundtrack&type=albums&offset=0&limit=1&numberOfTopResults=1`, options)
 	.then(response => response.json())
-	.then(response => console.log(response))
+	.then(data => {
+    console.log(data);
+    displayMusicList(data);
+  })
 	.catch(err => console.error(err));
 
 }
@@ -52,6 +55,13 @@ function displayMovieList(movies) {
   movieInfo.forEach((element)=>{
   element[1].textContent = movies.Search[0][element[1].id.split("-")[1]]
 })
+}
+
+function displayMusicList(albums) {
+  var musicInfo = Object.entries(document.getElementsByTagName("musicInfo"));
+  musicInfo.forEach((element)=>{
+    element[1].textcontent = albums.items[0].data[element[1].id.split("-")[1]]
+  })
 }
 
 //create function response to capture user input, include local storage
