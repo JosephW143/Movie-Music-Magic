@@ -57,11 +57,29 @@ function displayMovieList(movies) {
 })
 }
 
-function displayMusicList(albums) {
-  var musicInfo = Object.entries(document.getElementsByTagName("musicInfo"));
-  musicInfo.forEach((element)=>{
-    element[1].textcontent = albums.items[0].data[element[1].id.split("-")[1]]
-  })
+function displayMusicList(data) {
+  //var musicInfo = Object.entries(document.getElementsByTagName("musicInfo"));
+  //musicInfo.forEach((element)=>{
+    //element[1].textcontent = albums.albums.items[0].data[element[1].id.split("-")[1]]
+  //})
+  const musicName = data.albums.items[0].data.name;
+  const musicTitle = document.getElementById('music-name');
+  musicTitle.textContent = musicName;
+
+  const musicArtist = data.albums.items[0].data.artists.items[0].profile.name;
+  const musicArtistInfo = document.getElementById('music-artist');
+  musicArtistInfo.textContent = musicArtist;
+
+  var img = document.createElement('img');
+  var imgParent = document.getElementById('img-parent')
+  img.src = data.albums.items[0].data.coverArt.sources[0].url
+  imgParent.appendChild(img)
+
+
+
+  //const musicImg = data.albums.items[0].data.coverArt.sources[0].url;
+  //const displayImg = document.getElementById('music-img');
+  //displayImg.src = musicImg
 }
 
 //create function response to capture user input, include local storage
