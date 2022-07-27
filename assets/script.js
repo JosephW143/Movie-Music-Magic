@@ -7,14 +7,22 @@ var year = document.querySelector("#search")
 //let movies = [];
 //var nameInputEl = document.querySelector("#search")
 //var movieSearch = document.querySelector("#search")
-var musicApi = '815c4d4e03msh9872b4274f9aa53p1b93a1jsn7528b7bc9183'
+var musicApi = "815c4d4e03msh9872b4274f9aa53p1b93a1jsn7528b7bc9183"
 
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '815c4d4e03msh9872b4274f9aa53p1b93a1jsn7528b7bc9183',
+		'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+	}
+};
 
 var getMusic = function(movie) {
-  fetch(`https://spotify23.p.rapidapi.com/albums/?ids=3IBcauSj5M2A6lTeffJzdv`)
-  .then(response=>response.json())
-  .then(data=>console.log(data))
-  .catch(err=>console.error(err));
+  fetch(`https://spotify23.p.rapidapi.com/search/?q=${movie}%20soundtrack&type=albums&offset=0&limit=10&numberOfTopResults=1`, options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+
 }
 
 //Check calls movie API
@@ -29,33 +37,28 @@ var getMusic = function(movie) {
 
 //fetch url from movie api
 var getMovie = function(movie) {
-  fetch( `https://omdbapi.com/?s=${movie}&page=1&apiKey=8b11ffde`)
+  fetch(`https://omdbapi.com/?s=${movie}&limit=1&apiKey=8b11ffde`)
   .then(response=>response.json())
-  .then(data=>console.log(data))
-  .catch(err=>console.error(err));
- //if (data.Response = "True") displayMovieList(data.search);
+  .then(data=>{
+    console.log(data);
+    displayMovieList(data);
+  })
+  .catch(err=>console.error(err)); 
 }
 
-
-function findMovies() {
-  let movies = (search.value).trim();
-  if(movies.length >0) {
-    searchList.search.remove('hide-search-list');
-  loadMovies(movies);
-  }
-}
 
 function displayMovieList(movies) {
-for (let i = 0; i < movies.length; i++) {
-
-}
+  var movieInfo = Object.entries(document.getElementsByTagName("movieInfo"));
+  movieInfo.forEach((element)=>{
+  element[1].textContent = movies.Search[0][element[1].id.split("-")[1]]
+})
 }
 
 //create function response to capture user input, include local storage
-
 document.getElementById("movie-name").onclick = function(){
 var movieName = document.getElementById("search").value;
 getMovie(movieName);
+getMusic(movieName);
 //updateStorage(movieName);
 }
 
