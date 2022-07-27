@@ -3,10 +3,9 @@
     margin:0px;
     padding:0px;
     box-sizing:border-box ;
-    font-family:  'Kanit', sans-serif;
+    font-family:'Poppins'  'Kanit', sans-serif;
     scroll-behavior: smooth;
     scroll-padding-top:2rem ;
-
 }
 :root{
     --main-color:rgba(244, 244, 235, 0.819);
@@ -37,7 +36,6 @@ body{
     max-width: 1068px;
     margin: auto;
     width:100%;
-
 }
 header{
     position: fixed;
@@ -46,14 +44,12 @@ header{
     width:100%;
     background: var(--body-color);
     z-index: 100;
-
 }
 .nav{
     display:flex;
     align-items: center;
     justify-content: center;
     padding:20px 0;
-
 }
 .logo{
     font-size: 1.4rem;
@@ -65,7 +61,6 @@ header{
 .logo span{
     color: var(--main-color);
 }
-
 /* search box*/
 .search-box{
     max-width: 240px;
@@ -76,7 +71,7 @@ header{
     padding:8px 15px;
     background: var(--container-color);
     border-radius:4rem;
-    margin-right: 1rem;
+    margin-right: 1.1rem;
 }
 .search-box .bx{
     font-size: 1.1rem;
@@ -89,10 +84,9 @@ header{
     border: none;
     outline:none;
     color: black;
-    font-size:1rem
-
+    font-size:1rem;
+    background:transparent;
 }
-
 .user{
     display:flex;
 }
@@ -102,13 +96,13 @@ header{
     border-radius:50%;
     object-fit: cover;
     object-position: center;
-
 }
+/* Navbar*/
 .navbar{
     position: fixed;
     top:50%;
     transform: translate(-50%);
-    left:18px;
+    left:30px;
     display: flex;
     flex-direction: column;
     row-gap: 2.1em;
@@ -153,13 +147,14 @@ font-size:1.5rem;
     padding-left:40px;
 }
 .home-tittle{
-    font-size:2rem;
-    font-weight: 600;
+    font-size:3rem;
+    font-weight: 700;
 }
 .home-text p{
     font-size:1rem;
     margin:10px 0 20px;
-    color:var(--main-color)
+    color:var(--main-color);
+ 
 }
 .watch-btn{
     display:flex;
@@ -169,13 +164,14 @@ font-size:1.5rem;
 }
 .watch-btn .bx{
     font-size:30px;
-    background: var(--main-color);
+    background:rgba(0, 0, 0, 0.507);
     width:40px;
     height:40px;
     border-radius: 50%;
     display:flex;
     align-items: center;
     justify-content: center;
+   
 }
 .watch-btn .bx:hover{
     background: var(--hover-color);
@@ -183,6 +179,7 @@ font-size:1.5rem;
 .watch-btn span{
     font-size:1rem ;
     font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.43);
 }
 
 .heading{
@@ -191,11 +188,86 @@ font-size:1.5rem;
     justify-content: space-between;
     background: var(--container-color);
     padding:8px 14px;
-    border: 1px solid hsl(200 100% 99%/ 5%);
+    border: 1px solid rgba(255, 1, 1, 0.367);
     margin-bottom:2rem;
 }
 .heading-title{
+font-size: 1.2rem;
+font-weight: 500;
+}
+.movie-box{
+    position: relative;
+    width:100%;
+    height:380px;
+    overflow:hidden;
 
+}
+.movie-box-img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.movie-box.bot-text{
+position:absolute;
+bottom: 0;
+left:0;
+width:100%;
+height:100%;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+padding:14px;
+background: linear-gradient(8deg,
+hsl(240 17% 14%/74%)14%,
+hsl(240 17% 14%/74%)44%,);
+overflow:hidden;
+}.movie-tittle{
+    font-size:1.1rem;
+
+font-weight:500;
+}
+.movie-type{
+    font-size: 1rem;
+
+}
+.play.btn{
+    position: absolute;
+    bottom:.8rem;
+    right:.8rem
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+.swiper-btn{
+    display: flex;
+
+}
+
+.swiper-slide img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+  }
+.swiper-button-next,
+ .swiper-button-prev{
+    position:static !important;
+    margin: 0 0 0 10px !important;
+}
+.swiper-button-next, 
+.swiper-button-prev{
+color:var(--text-color);
+font-size: 18px !important;
+font-weight: 700;
+}
 }
 
 
