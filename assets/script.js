@@ -59,6 +59,12 @@ function displayMusicList(data) {
   var imgParent = document.getElementById('img-parent');
   img.src = data.albums.items[0].data.coverArt.sources[2].url;
   imgParent.appendChild(img);
+
+  // generate movie placeholder image in moive card
+  var img = document.createElement('img');
+  var imgParent = document.getElementById('img-card');
+  img.src = "./assets/movie-placeholder.jpeg"
+  imgParent.appendChild(img);
 }
 
 // create function response to capture user input, include local storage
