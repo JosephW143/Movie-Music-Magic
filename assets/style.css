@@ -1,15 +1,68 @@
-body {
-    height: 800px;
-    background-color: rgb(255, 255, 255); 
-    background-image: linear-gradient(to bottom, white, blue  ,black);
-  }     
+body:before {
+    content:"";
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index:-1; 
+    background: #fafafa;
+    background: linear-gradient(to bottom, #3e8ded 25%, 75%, #fafafa) ;
+  }   
+
+  h2 {
+    color: #fafafa;
+  }
+
+  main {
+    position: relative;
+    min-height: 100vh;
+  }
 
   footer {
-    position: absolute;
-  bottom: 0;
-  width: 100%;
+    bottom: 0;
+    width: 100%;
+    text-decoration-color: black;
   }
 
   nav {
     padding-left: 10px;
+    background: #3e8ded;
+  }
+
+  #movie-name {
+    margin-top: 15px;
+    background: #3e8ded;
+
+  }
+
+  #search {
+    padding-right: 10px;
+  }
+
+  #copyright {
+    color: black;
+  }
+
+  movieInfo {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  img {
+    padding: 10px;
+  }
+
+  #img-card {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  musicInfo {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }

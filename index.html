@@ -7,21 +7,20 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="./assets/seperate.css"
+    <link rel="stylesheet" href="./assets/seperate.css">
     <title>Movie Music Magic</title>
 </head>
 <body>
   <!--header-->
   <div class="navbar-fixed">
-    <nav class="blue">
+    <nav class="">
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">Movie Music Magic</a>
         <form>
-          <a id="movie-name" class="waves-effect waves-light btn blue right">button</a>
+          <a id="movie-name" class="waves-effect waves-light btn right">search</a>
           <div class="input-field right">
-            <input id="search" type="text" placeholder="search" required>
+            <input id="search" type="text" placeholder="" required>
             <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-            <i class="material-icons">close</i>
           </div>
         </form>
       </div>
@@ -46,7 +45,8 @@
       <div class="col s12 m12 l6">
         <h2 class="center">Movie</h2>
         <div class="card">
-          <div class="card-image">
+          <div id="img-card" class="card-image">
+            <img id="movie-img" src="./assets/movie-placeholder 2.jpeg">
             <movieInfo id="movie-Title">Movie Title</movieInfo>
           </div>
           <div class="card-content">
@@ -57,10 +57,10 @@
     </div>
   </main>
   <!--page footer-->
-  <footer class="page-footer blue">
+  <footer class="page-footer white">
     <div class="footer-copyright">
-      <div class="container">
-      © 2022 Copyright
+      <div id="copyright" class="container">
+      © 2022 Intelligent Iguanas Copyright
       </div>
     </div>
   </footer>
