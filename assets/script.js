@@ -2,12 +2,15 @@ var movieApi = `8b11ffde`;
 //var apiUrlMovie = "http://www.omdbapi.com/?apikey=8b11ffde&s=" + title + "&y=" + year + "&plot=short&r=json";
 //var apiUrlMovie =  `https://omdbapi.com/?s=avengers&page=1&apiKey=8b11ffde`;
 var movieFormEl = document.getElementById('search')
-var title = document.querySelector("#search")
-var year = document.querySelector("#search")
+//var title = document.querySelector("#search")
+//var year = document.querySelector("#search")
 //let movies = [];
 //var nameInputEl = document.querySelector("#search")
 //var movieSearch = document.querySelector("#search")
 var musicApi = "815c4d4e03msh9872b4274f9aa53p1b93a1jsn7528b7bc9183"
+
+//var imgParent = document.getElementById('img-parent');
+//var img = document.createElement('img');
 
 const options = {
 	method: 'GET',
@@ -71,9 +74,9 @@ function displayMusicList(data) {
   musicArtistInfo.textContent = musicArtist;
 
   var img = document.createElement('img');
-  var imgParent = document.getElementById('img-parent')
-  img.src = data.albums.items[0].data.coverArt.sources[0].url
-  imgParent.appendChild(img)
+  var imgParent = document.getElementById('img-parent');
+  img.src = data.albums.items[0].data.coverArt.sources[0].url;
+  imgParent.appendChild(img);
 
 
 
@@ -98,6 +101,7 @@ getMusic(movieName);
 
     if (movieSearch) {
       searchMovie(movieSearch)
+
     }
 
     let movie = {
@@ -105,7 +109,7 @@ getMusic(movieName);
       
     }
         movie.push(movie);
-       //  document.querySelector("input").reset();
+        //document.querySelector("input").reset();
   }
        // function updateStorage() {
        // localStorage.setItem('movieName', JSON.stringify(movie));
@@ -113,4 +117,3 @@ getMusic(movieName);
        // }
  
 //movieFormEl.addEventListener("submit", formSubmitHandler);
-
