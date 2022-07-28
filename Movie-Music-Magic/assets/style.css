@@ -199,7 +199,139 @@ span{
     display: flex;
     align-items: center;
 }
+.playing-inside img{
+   height: 250px;
+   border-radius: 10px;
+   transition: all 500ms ease-in-out;
+   display: flex;
+   align-items: center;
+}
+.playing-inside img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.bookaticket{
+    margin-top: 11px;
+}
+.bookaticket a:hover{
+    color:var(--main-color)}
+.bookaticket a{
+    display:flex;
+    background: var(--text-color);
+    border-radius:25px;
+    position:absolute;
+    padding: 5px 11px;
+    color: var(--body-color);
+    margin-top: 0px;
+    margin-left: 12px;
+    font-weight: bolder;
+    cursor: pointer;
+    align-items: center;
+}
+.thirdrow-movies{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background-color: var(--body-color);
+    padding: 0 22px;
+    color: var(--main-color);
+    margin-top: 1350px;
+}
+.thirdrow-movies h1{
+    font-size: 20px;
+    color:var(--text-color);
+}
+.thirdrow-container{
+    margin-top: 30px;
+    display: flex;
+    padding: 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+.thirdrow-inside h3{
+    font-size: 15px;
+    font-weight:500;
+    margin-top: 6px;
+}
+.thirdrow-inside img{
+   height: 250px;
+   transition: all 500ms ease-in-out;
+   border-radius: 10px;
+   display:flex;
+}
+.thirdrow-inside img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.BaT6{
+    background: var(--text-color);
+    border-radius:25px;
+    position:absolute;
+    padding: 7px 11px;
+    color: var(--body-color);
+    margin-top: 0px;
+    margin-left: 12px;
+    font-weight: bolder;
+    cursor: pointer;
+    align-items: center;
+}
+.BAT6:hover{
+color:var(--main-color)
+}
+.line{
+    height: 2px;
+    background-color: var(--main-color);
+    width: 7%;
+    margin-left: 170px;
+    position: absolute;
 
+}
+
+.footer{
+    position: absolute;
+    margin-top: 1960px;
+    height: 10vh;
+    color: var(--main-color);
+    background:var(--body-color);
+    width: 100%;
+    padding-bottom: -22px;
+    padding-right: 28px;;
+}
+
+.footer-logo img{ 
+    font-size: 22px;
+    height:9vh;
+    margin-left: 70px;
+    margin-top: -90px;
+   
+}
+.footer-logo h1{
+    color:var(--text-color);
+    font-size: 40px;
+    margin-top: 25px;
+    margin-left: 650px;
+    cursor: pointer;
+
+}
+.copyright{
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.copyright span{
+    margin-right: 2px;
+}
+.btn4{
+    margin-right: 60px;
+    margin-top: 30px;
+}
+.btn4 a{
+    text-decoration: none;
+    padding: 10px 25px;
+    color: var(--body-color);
+    background: var(--text-color);
+    border-radius: 30px;
+}
 
 
 
