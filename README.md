@@ -14,7 +14,7 @@ The purpose here was to collaboratively create a front end webiste that uses a m
 * https://josephw143.github.io/Movie-Music-Magic/
 
 ## Screentshot of website
-(./assets/mmm.jpg)
+./assets/mmm.jpg
 
 ## Made by
 * Joseph Wright
